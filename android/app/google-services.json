@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "580426483615",
+    "project_id": "labor-f4ef8",
+    "storage_bucket": "labor-f4ef8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:580426483615:android:a79674393c63a3e5969faa",
+        "android_client_info": {
+          "package_name": "com.example.labor_application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "580426483615-gnsjjllv7jqu4es9npfdlaea71prhdl0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1UCrCtIvoY6u4zE9WEIsQhRfYnAygywU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "580426483615-gnsjjllv7jqu4es9npfdlaea71prhdl0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
