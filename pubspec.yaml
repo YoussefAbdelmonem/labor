@@ -25,6 +25,8 @@ dependencies:
   flutter_screenutil: ^5.6.1
   animated_widgets: ^1.1.0
   firebase_core: ^2.14.0
+  flutter_smart_dialog: ^4.8.2
+  flutter_svg:
 
 dev_dependencies:
   flutter_test:

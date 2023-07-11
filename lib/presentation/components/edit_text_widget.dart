@@ -75,7 +75,7 @@ class _EditTextWidgetState extends State<EditTextWidget> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      cursorColor: AppColors.primiry,
+      cursorColor: AppColors.primary,
       readOnly: widget.readOnly ?? false,
       enabled: widget.enable ?? true,
       validator: widget.validate,
@@ -92,7 +92,7 @@ class _EditTextWidgetState extends State<EditTextWidget> {
       style: TextStyle(
           color: AppColors.black,
           fontSize: 15,
-          fontFamily: "Baloo",
+          fontFamily: "Tajawal",
           fontWeight: FontWeight.w600),
       decoration: widget.inputDecoration ??
           InputDecoration(
@@ -131,8 +131,8 @@ class _EditTextWidgetState extends State<EditTextWidget> {
                   borderSide: BorderSide(color: widget.borderColor, width: 1.0),
                   borderRadius:
                       BorderRadius.all(Radius.circular(widget.borderRadius))),
-              labelStyle: TextStyle(color: AppColors.primiry,fontFamily: "Baloo"),
-              hintStyle: TextStyle(color: AppColors.black, fontSize: 12.sp,fontFamily: "Baloo"),
+              labelStyle: TextStyle(color: AppColors.primary,fontFamily: "Tajawal"),
+              hintStyle: TextStyle(color: AppColors.black, fontSize: 12.sp,fontFamily: "Tajawal"),
               hintText: widget.hintText),
       keyboardType: widget.type,
       obscureText: widget.password,

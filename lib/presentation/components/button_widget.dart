@@ -17,15 +17,15 @@ class ButtonWidget extends StatelessWidget {
       {Key? key,
       this.gradient,
       this.title = "OK",
-      this.width = 308.0,
-      this.height = 54.0,
+      this.width = 350.0,
+      this.height = 60.0,
       this.onTap,
       this.child,
       this.textColor = Colors.white,
-      this.buttonColor = AppColors.primiry,
-      this.borderColor = AppColors.primiry,
+      this.buttonColor = AppColors.primary,
+      this.borderColor = AppColors.primary,
       this.withBorder = false,
-      this.radius = 80.0})
+      this.radius = 16.0})
       : super(key: key);
 
   @override
@@ -56,7 +56,7 @@ class ButtonWidget extends StatelessWidget {
         child: child ??
             TextWidget(
               title,
-              fontSize: 16.sp,
+              fontSize: 24.sp,
               textAlign: TextAlign.center,
               color: textColor,
             ),

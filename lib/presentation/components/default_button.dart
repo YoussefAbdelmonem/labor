@@ -48,7 +48,7 @@ class MyButton extends StatelessWidget {
               image: DecorationImage(
                   fit: BoxFit.fill,
                   colorFilter: new ColorFilter.mode(
-                      color ?? AppColors.primiry, BlendMode.srcIn),
+                      color ?? AppColors.primary, BlendMode.srcIn),
                   image: Image.asset(
                     'assets/images/btn.png',
                     height: height,
@@ -162,7 +162,7 @@ Widget defaultButton({
         height: height ?? 70,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(radius),
-          color: AppColors.primiry,
+          color: AppColors.primary,
           // border: Border.all(color: AppColors.primiry)
           // shape: BoxShape.circle
         ),
@@ -215,12 +215,12 @@ class MyTextButton extends StatelessWidget {
       child: CustomText(
         text,
         fontsize: size ?? 16.sp,
-        color: color ?? AppColors.primiry,
+        color: color ?? AppColors.primary,
         weight: FontWeight.w700,
         //  style: TextStyle(color: AppColors.secondary),
       ),
       style: TextButton.styleFrom(
-          elevation: 0, foregroundColor: AppColors.primiry),
+          elevation: 0, foregroundColor: AppColors.primary),
     );
   }
 }

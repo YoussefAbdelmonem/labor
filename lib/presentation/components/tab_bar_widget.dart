@@ -39,7 +39,7 @@ class _TabBarWidgetState extends State<TabBarWidget>
       labelStyle: TextStyle(
         fontWeight: FontWeight.w700,
         fontSize: 12.sp,
-        fontFamily: "Baloo",
+        fontFamily: "Tajawal",
 
 
 

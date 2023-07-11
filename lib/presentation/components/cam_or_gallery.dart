@@ -46,7 +46,7 @@ class GalleryORCamera extends StatelessWidget {
                     ),
                     CustomText(
                       'Gallery'.tr(),
-                      color: AppColors.primiry,
+                      color: AppColors.primary,
                     )
                   ],
                 ),
@@ -56,7 +56,7 @@ class GalleryORCamera extends StatelessWidget {
                 height: 50,
                 child: VerticalDivider(
                   thickness: .5,
-                  color: AppColors.primiry,
+                  color: AppColors.primary,
                 )),
             InkWell(
               onTap: () async {
@@ -79,7 +79,7 @@ class GalleryORCamera extends StatelessWidget {
                     ),
                     CustomText(
                       'Camera'.tr(),
-                      color: AppColors.primiry,
+                      color: AppColors.primary,
                     )
                   ],
                 ),

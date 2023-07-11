@@ -151,7 +151,7 @@ class _TextFeildWithCustomValidationState
                     border: widget.border ??
                         OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: AppColors.primiry,
+                            color: AppColors.primary,
                           ),
                           borderRadius: BorderRadius.circular(20),
                         ),
@@ -161,14 +161,14 @@ class _TextFeildWithCustomValidationState
                     disabledBorder: widget.disableborder ??
                         OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: AppColors.primiry,
+                            color: AppColors.primary,
                           ),
                           borderRadius: BorderRadius.circular(20),
                         ),
                     focusedBorder: widget.foucsborder ??
                         OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: AppColors.primiry,
+                            color: AppColors.primary,
                           ),
                           borderRadius: BorderRadius.circular(20),
                         ),
@@ -308,7 +308,7 @@ class _LoginTextFieldState extends State<LoginTextField> {
               border: widget.border ??
                   OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: AppColors.primiry,
+                      color: AppColors.primary,
                     ),
                     borderRadius: BorderRadius.circular(20),
                   ),
@@ -317,13 +317,13 @@ class _LoginTextFieldState extends State<LoginTextField> {
               // ),
               disabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: AppColors.primiry,
+                  color: AppColors.primary,
                 ),
                 borderRadius: BorderRadius.circular(20),
               ),
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: AppColors.primiry,
+                  color: AppColors.primary,
                 ),
                 borderRadius: BorderRadius.circular(20),
               ),
@@ -400,12 +400,12 @@ class _DefaultTextFieldState extends State<DefaultTextField> {
             minLines: widget.minlines,
             maxLines: widget.maxlines ?? 1,
             enabled: widget.enable,
-            style: TextStyle(color: AppColors.primiry),
+            style: TextStyle(color: AppColors.primary),
             decoration: InputDecoration(
                 hintStyle: TextStyle(color: Colors.grey),
                 enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(50),
-                    borderSide: BorderSide(color: AppColors.primiry)),
+                    borderSide: BorderSide(color: AppColors.primary)),
                 contentPadding: EdgeInsets.symmetric(horizontal: 15),
                 fillColor: Colors.white,
                 filled: true,
