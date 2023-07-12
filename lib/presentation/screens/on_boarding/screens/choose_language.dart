@@ -37,14 +37,17 @@ class ChooseLanguagesScreen extends StatelessWidget {
                 fontWeight: FontWeight.w700,
               ),
               RadioListTile(
-                value: true,
-                groupValue: "language",
+                value: Locale('en', "US"),
+                groupValue: context.locale,
+                activeColor: AppColors.primary,
                 controlAffinity: ListTileControlAffinity.trailing,
 
                 title: TextWidget(
                   "English".tr(),
                 ),
-                onChanged: (e) {},
+                onChanged: (e) {
+                  context.setLocale(Locale('en', "US"));
+                },
               ),
               Divider(
                 height: 1,
@@ -52,13 +55,16 @@ class ChooseLanguagesScreen extends StatelessWidget {
               ),
               16.ph,
               RadioListTile(
-                value: false,
+                value: Locale('ar', "EG"),
                 controlAffinity: ListTileControlAffinity.trailing,
-                groupValue: "language",
+                groupValue: context.locale,
+                activeColor: AppColors.primary,
                 title: TextWidget(
                   "Arabic".tr(),
                 ),
-                onChanged: (e) {},
+                onChanged: (e) {
+                  context.setLocale(Locale('ar', "EG"));
+                },
               ),
               Divider(
                 height: 1,
