@@ -16,12 +16,12 @@ class SplashScreen extends StatelessWidget {
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: double.infinity,
-        decoration: BoxDecoration(
-            image: DecorationImage(
-                image: Image.asset(
-                  "background".png('images'),
-                ).image,
-                fit: BoxFit.fill)),
+        // decoration: BoxDecoration(
+        //     image: DecorationImage(
+        //         image: Image.asset(
+        //           "background".png('images'),
+        //         ).image,
+        //         fit: BoxFit.fill)),
         child: Center(
           child: OpacityAnimatedWidget.tween(
             opacityEnabled: 1,

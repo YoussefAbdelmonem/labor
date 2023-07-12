@@ -6,6 +6,7 @@ import 'package:labor_application/core/themes/colors.dart';
 import 'package:labor_application/core/utilis.dart';
 import 'package:labor_application/presentation/components/button_widget.dart';
 import 'package:labor_application/presentation/components/custom_text.dart';
+import 'package:labor_application/presentation/screens/on_boarding/screens/on_boarding.dart';
 
 class ChooseLanguagesScreen extends StatelessWidget {
   const ChooseLanguagesScreen({Key? key}) : super(key: key);
@@ -88,6 +89,9 @@ class ChooseLanguagesScreen extends StatelessWidget {
               16.ph,
               Center(child: ButtonWidget(
                 title: "Enter".tr(),
+                onTap: (){
+                  Utils.openScreen(context, OnBoardingScreen());
+                },
               )),
               16.ph,
             ],
