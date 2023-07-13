@@ -21,8 +21,6 @@ class LoginCubit extends Cubit<LoginState> {
     password = value;
     emit(UpdatePasswordState());
   }
-  Future login ()async{
 
-  }
 
 }
