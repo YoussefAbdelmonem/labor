@@ -6,8 +6,9 @@ import 'package:labor_application/core/utilis.dart';
 const Color mainColor = Color(0xff5FD068);
 const Color notiColor = Color(0xff991210);
 class AppColors {
-  //#5FD068
+  //###F9FFF6
   static const Color primary = Color(0xff5FD068);
+  static const Color textFormField = Color(0xffF9FFF9);
 
   static Color get secondary =>
       Utils.appMode == ThemeMode.light ? Color(0xffFDC515) : Colors.white;

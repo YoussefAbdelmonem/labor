@@ -30,36 +30,38 @@ class ButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: width,
-      height: height,
-      child: ElevatedButton(
-        onPressed: onTap,
-        style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all<Color>(buttonColor),
-          shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(
-                radius,
+    return Center(
+      child: SizedBox(
+        width: width,
+        height: height,
+        child: ElevatedButton(
+          onPressed: onTap,
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all<Color>(buttonColor),
+            shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
+            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+              RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(
+                  radius,
+                ),
+                side: withBorder
+                    ? BorderSide(
+                        color: borderColor,
+                      )
+                    : const BorderSide(
+                        color: Colors.transparent,
+                      ),
               ),
-              side: withBorder
-                  ? BorderSide(
-                      color: borderColor,
-                    )
-                  : const BorderSide(
-                      color: Colors.transparent,
-                    ),
             ),
           ),
+          child: child ??
+              TextWidget(
+                title,
+                fontSize: 24.sp,
+                textAlign: TextAlign.center,
+                color: textColor,
+              ),
         ),
-        child: child ??
-            TextWidget(
-              title,
-              fontSize: 24.sp,
-              textAlign: TextAlign.center,
-              color: textColor,
-            ),
       ),
     );
   }

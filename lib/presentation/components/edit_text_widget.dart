@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../core/themes/colors.dart';
 import 'custom_text.dart';
 
-class EditTextWidget extends StatefulWidget {
+class TextFormFieldWidget extends StatefulWidget {
   final String? hintText, label, errorText;
   final TextInputType type;
   bool password;
@@ -28,7 +28,7 @@ class EditTextWidget extends StatefulWidget {
   String? Function(String?)? validate;
   bool? enable;
   bool? readOnly;
-  EditTextWidget(
+  TextFormFieldWidget(
       {required this.onChanged,
       this.onSaved,
       this.readOnly,
@@ -61,10 +61,10 @@ class EditTextWidget extends StatefulWidget {
       : super(key: key);
 
   @override
-  State<EditTextWidget> createState() => _EditTextWidgetState();
+  State<TextFormFieldWidget> createState() => _TextFormFieldWidgetState();
 }
 
-class _EditTextWidgetState extends State<EditTextWidget> {
+class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
   bool? isPass;
   @override
   void initState() {
@@ -100,7 +100,7 @@ class _EditTextWidgetState extends State<EditTextWidget> {
               contentPadding: widget.contentPadding,
 
               filled: true,
-              fillColor: widget.backgroundColor,
+              fillColor: AppColors.textFormField,
               prefixIcon: widget.prefixIcon,
               suffix: widget.suffixWidget,
               suffixIcon: widget.suffixIcon ??
@@ -124,7 +124,7 @@ class _EditTextWidgetState extends State<EditTextWidget> {
               //label: TextWidget(widget.label),
               focusedBorder: OutlineInputBorder(
                   borderSide:
-                      BorderSide(color: widget.activeBorderColor, width: 1.0),
+                      BorderSide(color: AppColors.primary, width: 1.0),
                   borderRadius:
                       BorderRadius.all(Radius.circular(widget.borderRadius))),
               enabledBorder: OutlineInputBorder(
@@ -132,7 +132,7 @@ class _EditTextWidgetState extends State<EditTextWidget> {
                   borderRadius:
                       BorderRadius.all(Radius.circular(widget.borderRadius))),
               labelStyle: TextStyle(color: AppColors.primary,fontFamily: "Tajawal"),
-              hintStyle: TextStyle(color: AppColors.black, fontSize: 12.sp,fontFamily: "Tajawal"),
+              hintStyle: TextStyle(color: AppColors.black, fontSize: 16.sp,fontFamily: "Tajawal"),
               hintText: widget.hintText),
       keyboardType: widget.type,
       obscureText: widget.password,

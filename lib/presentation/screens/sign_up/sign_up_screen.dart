@@ -9,34 +9,33 @@ import 'package:labor_application/presentation/components/button_widget.dart';
 import 'package:labor_application/presentation/components/custom_text.dart';
 import 'package:labor_application/presentation/components/edit_text_widget.dart';
 import 'package:labor_application/presentation/screens/login/cubit/login_cubit.dart';
-import 'package:labor_application/presentation/screens/login/cubit/login_cubit.dart';
-import 'package:labor_application/presentation/screens/sign_up/sign_up_screen.dart';
+import 'package:labor_application/presentation/screens/sign_up/cubit/register_cubit.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => LoginCubit(),
-      child: BlocConsumer<LoginCubit, LoginState>(
+      create: (context) => RegisterCubit(),
+      child: BlocConsumer<RegisterCubit, RegisterState>(
         listener: (context, state) {
           // TODO: implement listener
         },
         builder: (context, state) {
-          LoginCubit cubit = BlocProvider.of(context);
+          RegisterCubit cubit = BlocProvider.of(context);
           return Scaffold(
-              body: SafeArea(
-                child: Padding(
-                  padding: EdgeInsets.all(16.0.w),
-                  child: SingleChildScrollView(
+              body: SingleChildScrollView(
+                child: SafeArea(
+                  child: Padding(
+                    padding: EdgeInsets.all(16.0.w),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Center(
                           child: TextWidget(
-                            "Login".tr(),
+                            "Sign Up".tr(),
                             fontSize: 26.sp,
                             fontWeight: FontWeight.bold,
                           ),
@@ -51,6 +50,29 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ),
                         32.ph,
+                        TextWidget(
+                          "full name".tr(),
+                          fontSize: 22.sp,
+                          color: AppColors.black,
+                        ),
+                        16.ph,
+                        TextFormFieldWidget(
+                          onChanged: (value) {
+                            cubit.updateName(value);
+                          },
+
+                          controller: cubit.nameController,
+
+                          suffixIcon: const Icon(
+                            Icons.phone,
+                            color: AppColors.primary,
+
+                          ),
+                          hintText: "Enter Your full name".tr(),
+
+
+                        ),
+                        16.ph,
                         TextWidget(
                           "phone".tr(),
                           fontSize: 22.sp,
@@ -110,7 +132,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                         16.ph,
                         ButtonWidget(
-                          title: "Login".tr(),
+                          title: "Sign Up".tr(),
 
                           onTap: (){},
                           buttonColor: AppColors.primary,
