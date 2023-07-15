@@ -50,9 +50,9 @@ flutter:
 
 
   fonts:
-    - family: Tajawal
+    - family: Quicksand
       fonts:
-       - asset: assets/fonts/Tajawal Medium Regular.ttf
-       - asset: assets/fonts/Tajawal Regular.ttf
+       - asset: assets/fonts/Quicksand_Bold.otf
+       - asset: assets/fonts/Quicksand_Book.otf
 
 

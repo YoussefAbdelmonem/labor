@@ -92,7 +92,7 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
       style: TextStyle(
           color: AppColors.black,
           fontSize: 15,
-          fontFamily: "Tajawal",
+          fontFamily: "Quicksand",
           fontWeight: FontWeight.w600),
       decoration: widget.inputDecoration ??
           InputDecoration(
@@ -131,8 +131,8 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
                   borderSide: BorderSide(color: widget.borderColor, width: 1.0),
                   borderRadius:
                       BorderRadius.all(Radius.circular(widget.borderRadius))),
-              labelStyle: TextStyle(color: AppColors.primary,fontFamily: "Tajawal"),
-              hintStyle: TextStyle(color: AppColors.black, fontSize: 16.sp,fontFamily: "Tajawal"),
+              labelStyle: TextStyle(color: AppColors.primary,fontFamily: "Quicksand"),
+              hintStyle: TextStyle(color: AppColors.black, fontSize: 16.sp,fontFamily: "Quicksand"),
               hintText: widget.hintText),
       keyboardType: widget.type,
       obscureText: widget.password,

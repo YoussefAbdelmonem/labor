@@ -26,7 +26,7 @@ class CustomText extends StatelessWidget {
                 height: height,
                 fontSize: 20.sp,
                 color: AppColors.black,
-                fontFamily: "Tajawal",
+                fontFamily: "Quicksand",
                 fontWeight: FontWeight.w600)
             .copyWith(
                 decoration: decoration,
@@ -41,7 +41,7 @@ class CustomText extends StatelessWidget {
                 fontSize: 14.sp,
                 height: height,
                 color: AppColors.black,
-                fontFamily: "Tajawal",
+                fontFamily: "Quicksand",
                 fontWeight: FontWeight.w400)
             .copyWith(
                 decoration: decoration,
@@ -57,7 +57,7 @@ class CustomText extends StatelessWidget {
                 fontSize: 16.sp,
                 color: AppColors.black,
                 height: height,
-                fontFamily: "Tajawal",
+                fontFamily: "Quicksand",
                 fontWeight: FontWeight.w600)
             .copyWith(
                 decoration: decoration,
@@ -115,7 +115,7 @@ class CustomText extends StatelessWidget {
           fontsize: fontsize,
           height: height,
           // fontFamily: fontFamily ?? context.locale == Locale('ar', 'EG')?"grotley": "stc",
-          fontFamily: "Tajawal",
+          fontFamily: "Quicksand",
           overflow: overflow,
           decoration: decoration,
           weight: weight,
@@ -153,7 +153,7 @@ class TextWidget extends StatelessWidget {
 
       overflow: TextOverflow.ellipsis,
       style: TextStyle(
-        fontFamily: fontFamily ?? 'Tajawal',
+        fontFamily: fontFamily ?? 'Quicksand',
         fontSize: fontSize ?? 16.sp,
         fontWeight: fontWeight,
         decoration: isUnderLine ? TextDecoration.underline : null,

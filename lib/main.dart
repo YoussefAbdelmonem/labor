@@ -53,21 +53,21 @@ class MyApp extends StatelessWidget {
             localizationsDelegates: context.localizationDelegates,
             debugShowCheckedModeBanner: false,
             title: 'labor',
-            // theme: ThemeData(
-            //     fontFamily: 'Tajawal',
-            //     textTheme:  const TextTheme(),
-            //     primarySwatch: Colors.green,
-            //     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-            //       selectedLabelStyle: TextStyle(
-            //           fontFamily: "Tajawal",
-            //           fontSize: 14.sp
-            //       ),
-            //       unselectedLabelStyle: TextStyle(
-            //           fontFamily: "Tajawal",
-            //           fontSize: 14.sp
-            //       ),
-            //     )
-            // ),
+            theme: ThemeData(
+                fontFamily: 'Quicksand',
+                textTheme:  const TextTheme(),
+                primarySwatch: Colors.green,
+                bottomNavigationBarTheme: BottomNavigationBarThemeData(
+                  selectedLabelStyle: TextStyle(
+                      fontFamily: "Quicksand",
+                      fontSize: 14.sp
+                  ),
+                  unselectedLabelStyle: TextStyle(
+                      fontFamily: "Quicksand",
+                      fontSize: 14.sp
+                  ),
+                )
+            ),
             home: const SplashScreen(),
           );
         });
