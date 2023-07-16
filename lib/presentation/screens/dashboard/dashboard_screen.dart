@@ -7,10 +7,14 @@ class DashboardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
 
-    body:Column(
-     children: [
-      Text("Dashboard Screen"),
-     ],
+    body:SafeArea(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+       mainAxisAlignment: MainAxisAlignment.center,
+       children: [
+        Text("Dashboard Screen"),
+       ],
+      ),
     )
 
     );
