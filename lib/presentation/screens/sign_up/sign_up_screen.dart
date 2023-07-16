@@ -8,6 +8,7 @@ import 'package:labor_application/core/utilis.dart';
 import 'package:labor_application/presentation/components/button_widget.dart';
 import 'package:labor_application/presentation/components/custom_text.dart';
 import 'package:labor_application/presentation/components/edit_text_widget.dart';
+import 'package:labor_application/presentation/layout/home_layout.dart';
 import 'package:labor_application/presentation/screens/login/cubit/login_cubit.dart';
 import 'package:labor_application/presentation/screens/sign_up/cubit/register_cubit.dart';
 
@@ -134,7 +135,13 @@ class SignUpScreen extends StatelessWidget {
                         ButtonWidget(
                           title: "Sign Up".tr(),
 
-                          onTap: (){},
+                          onTap: (){
+                           final response= cubit.userRegister();
+
+                           if(response){
+                             Utils.openScreen(context, HomeLayout());
+                           }
+                          },
                           buttonColor: AppColors.primary,
 
                         ),
