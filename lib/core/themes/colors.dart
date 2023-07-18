@@ -8,6 +8,7 @@ const Color notiColor = Color(0xff991210);
 class AppColors {
   //###F9FFF6
   static const Color primary = Color(0xff5FD068);
+  static const Color greenForm = Color(0xFF4B8673);
   static const Color textFormField = Color(0xffF9FFF9);
 
   static Color get secondary =>

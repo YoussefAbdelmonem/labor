@@ -56,6 +56,12 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
                 fontFamily: 'Quicksand',
                 textTheme:  const TextTheme(),
+                appBarTheme: const AppBarTheme(
+                  backgroundColor: Colors.white,
+                  iconTheme: IconThemeData(color: Colors.black),
+                  elevation: 0,
+                  centerTitle: true,
+                ),
                 primarySwatch: Colors.green,
                 bottomNavigationBarTheme: BottomNavigationBarThemeData(
                   selectedLabelStyle: TextStyle(

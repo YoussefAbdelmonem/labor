@@ -18,6 +18,7 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final key = GlobalKey<FormState>();
     return BlocProvider(
       create: (context) => LoginCubit(),
       child: BlocConsumer<LoginCubit, LoginState>(
@@ -31,155 +32,175 @@ class LoginScreen extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.all(16.0.w),
                   child: SingleChildScrollView(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Center(
-                          child: TextWidget(
-                            "Login".tr(),
-                            fontSize: 26.sp,
-                            fontWeight: FontWeight.bold,
+                    child: Form(
+                      key: key,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Center(
+                            child: TextWidget(
+                              "Login".tr(),
+                              fontSize: 26.sp,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                        16.ph,
-                        Center(
-                          child: TextWidget(
-                            "Please Enter your Phone and password to continue".tr(),
-                            fontSize: 22.sp,
-                            textAlign: TextAlign.center,
-                            color: AppColors.grey,
+                          16.ph,
+                          Center(
+                            child: TextWidget(
+                              "Please Enter your Phone and password to continue".tr(),
+                              fontSize: 22.sp,
+                              textAlign: TextAlign.center,
+                              color: AppColors.grey,
+                            ),
                           ),
-                        ),
-                        32.ph,
-                        TextWidget(
-                          "phone".tr(),
-                          fontSize: 22.sp,
-                          color: AppColors.black,
-                        ),
-                        16.ph,
-                        TextFormFieldWidget(
-                          onChanged: (value) {
-                            cubit.updatePhone(value);
-                          },
-
-                          controller: cubit.phoneController,
-
-                          suffixIcon: const Icon(
-                            Icons.phone,
-                            color: AppColors.primary,
-
-                          ),
-                          hintText: "Enter Your Phone".tr(),
-
-
-                        ),
-                        32.ph,
-                        TextWidget(
-                          "password".tr(),
-                          fontSize: 22.sp,
-                          color: AppColors.black,
-                        ),
-                        16.ph,
-                        TextFormFieldWidget(
-                          onChanged: (value) {
-                            cubit.updatePassword(value);
-                          },
-
-                          controller: cubit.passwordController,
-
-                          suffixIcon: Icon(
-                            Icons.remove_red_eye,
-                            color: AppColors.primary,
-
-                          ),
-                          hintText: "Enter Your Password".tr(),
-
-
-                        ),
-                        16.ph,
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            TextButton(onPressed: () {}, child: TextWidget(
-                              "Forget Password".tr(),
-                              color: AppColors.black,
-                              fontSize: 16.sp,
-
-                            )),
-                          ],
-                        ),
-                        16.ph,
-                        ButtonWidget(
-                          title: "Login".tr(),
-
-                          onTap: (){
-                            Utils.openScreen(context, HomeLayout());
-                          },
-                          buttonColor: AppColors.primary,
-
-                        ),
-                        16.ph,
-                        Center(
-                          child: TextWidget(
-                            "OR".tr(),
+                          32.ph,
+                          TextWidget(
+                            "phone".tr(),
                             fontSize: 22.sp,
                             color: AppColors.black,
                           ),
-                        ),
-                        16.ph,
-                        ButtonWidget(
-                          onTap: (){},
-                          buttonColor: AppColors.textFormField,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              SvgPicture.asset("assets/images/facebook.svg"),
-                              8.pw,
-                              TextWidget("Facebook".tr(),)
-                            ],
-                          ),
+                          16.ph,
+                          TextFormFieldWidget(
+                            onChanged: (value) {
+                              cubit.updatePhone(value);
+                            },
 
-                        ),
-                        16.ph,
-                        ButtonWidget(
+                            controller: cubit.phoneController,
+                            validate: (value){
+                              if (value!.isEmpty) {
+                                return "Please Enter Your Phone".tr();
 
-                          onTap: (){},
-                          buttonColor: AppColors.textFormField,
+                              }
+                              return null;
+                            },
 
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              SvgPicture.asset("assets/images/google.svg"),
-                              8.pw,
-                              TextWidget("Google".tr(),)
-                            ],
-                          ),
-
-                        ),
-                        16.ph,
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            TextWidget(
-                              "Don't have an account?".tr(),
+                            suffixIcon: const Icon(
+                              Icons.phone,
+                              color: AppColors.primary,
 
                             ),
-                            4.pw,
-                            TextButton(onPressed: ()
-                            {
-                              Utils.openScreen(context, SignUpScreen());
-                            }, child: TextWidget(
-                              "Sign Up".tr(),
-                              fontWeight: FontWeight.bold,
-                            ))
-                          ],
-                        )
+                            hintText: "Enter Your Phone".tr(),
+
+
+                          ),
+                          32.ph,
+                          TextWidget(
+                            "password".tr(),
+                            fontSize: 22.sp,
+                            color: AppColors.black,
+                          ),
+                          16.ph,
+                          TextFormFieldWidget(
+                            onChanged: (value) {
+                              cubit.updatePassword(value);
+                            },
+
+                            controller: cubit.passwordController,
+                            validate: (value){
+                              if (value!.isEmpty) {
+                                return "Please Enter Your Password".tr();
+
+                              }
+                            },
+
+                            suffixIcon: Icon(
+                              Icons.remove_red_eye,
+                              color: AppColors.primary,
+
+                            ),
+                            hintText: "Enter Your Password".tr(),
+
+
+                          ),
+                          16.ph,
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              TextButton(onPressed: () {}, child: TextWidget(
+                                "Forget Password".tr(),
+                                color: AppColors.black,
+                                fontSize: 16.sp,
+
+                              )),
+                            ],
+                          ),
+                          16.ph,
+                          ButtonWidget(
+                            title: "Login".tr(),
+
+                            onTap: ()async {
+                              // if ( key.currentState!.validate()) {
+                              //   await cubit.login(context: context);
+                              //
+                              // }
+                              Utils.openScreen(context, HomeLayout());
+                            },
+                            buttonColor: AppColors.primary,
+
+                          ),
+                          16.ph,
+                          Center(
+                            child: TextWidget(
+                              "OR".tr(),
+                              fontSize: 22.sp,
+                              color: AppColors.black,
+                            ),
+                          ),
+                          16.ph,
+                          ButtonWidget(
+                            onTap: (){},
+                            buttonColor: AppColors.textFormField,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SvgPicture.asset("assets/images/facebook.svg"),
+                                8.pw,
+                                TextWidget("Facebook".tr(),)
+                              ],
+                            ),
+
+                          ),
+                          16.ph,
+                          ButtonWidget(
+
+                            onTap: (){},
+                            buttonColor: AppColors.textFormField,
+
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SvgPicture.asset("assets/images/google.svg"),
+                                8.pw,
+                                TextWidget("Google".tr(),)
+                              ],
+                            ),
+
+                          ),
+                          16.ph,
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              TextWidget(
+                                "Don't have an account?".tr(),
+
+                              ),
+                              4.pw,
+                              TextButton(onPressed: ()
+                              {
+                                Utils.openScreen(context, SignUpScreen());
+                              }, child: TextWidget(
+                                "Sign Up".tr(),
+                                fontWeight: FontWeight.bold,
+                              ))
+                            ],
+                          )
 
 
 
 
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),

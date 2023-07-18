@@ -27,7 +27,7 @@ dependencies:
   firebase_core: ^2.14.0
   flutter_smart_dialog: ^4.8.2
   smooth_page_indicator: ^1.1.0
-  firebase_auth: ^4.7.0
+  firebase_auth:
   flutter_svg:
 
 dev_dependencies:
